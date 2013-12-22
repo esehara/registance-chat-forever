@@ -1,0 +1,17 @@
+<h1>Welcome to Registance Chat!!</h1>
+
+<%= link_to '新しい部屋を作る', new_room_path %>
+
+<% @rooms.each do |room| %>
+<div>
+  <ul>
+    <li>
+      <b>部屋: <%= room.name %></b>
+    </li>
+    <li>
+      参加者上限: max <%= room.member %>人
+    </li>
+  </ul>
+ 
+</div>
+<% end %>
